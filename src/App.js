@@ -1,24 +1,41 @@
-import logo from './logo.svg';
+import { Route, Routes } from 'react-router';
 import './App.css';
+import Navbar from './components/Navbar/Navbar'
+import Container from '@mui/material/Container'
+import Home from './components/Home/Home';
+import Footer from './components/Footer/Footer';
+import Box from '@mui/material/Box'
+import { grey } from '@mui/material/colors';
+import AboutUsPage from './components/About/About';
+import ContactUs from './components/ConactPage/ContactUs';
+import ProductsPage from './components/ProductPage/ProductPage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div >
+      <Navbar />
+      <Routes>
+        <Route
+          path="/"
+          element={<Home />}
+        />
+        <Route
+          path="/products"
+          element={<ProductsPage />}
+        />
+        <Route
+          path="/about"
+          element={<AboutUsPage />}
+        />
+        <Route
+          path="/contact"
+          element={<ContactUs />}
+        />
+      </Routes>
+      <Box width={'100vw'} sx={{ bgcolor: grey[100] }}>
+        <Footer />
+      </Box>
+    </div >
   );
 }
 
