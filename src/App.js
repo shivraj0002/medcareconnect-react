@@ -31,6 +31,10 @@ function App() {
           path="/contact"
           element={<ContactUs />}
         />
+        <Route
+          path="*"
+          element={<h1>Error Page Not Found</h1>}
+        />
       </Routes>
       <Box width={'100vw'} sx={{ bgcolor: grey[100] }}>
         <Footer />
