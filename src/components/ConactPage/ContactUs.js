@@ -61,15 +61,15 @@ const ContactUs = () => {
       console.log("Message:", message);
 
       const result = await emailjs.send(
-        "service_cbfxuvi",
-        "template_1mh4rhf",
+        process.env.REACT_APP_EMAIL_SERVICE_KEY,
+        process.env.REACT_APP_EMAIL_TEMPLATE_KEY,
         {
           from_name: name,
           to_name: "Vanshan Pharmaceuticals",
           message: `${message}, Customer Phone: ${phone}, Customer Email: ${email}`,
           reply_to: "Vanshan Pharmaceuticals Team",
         },
-        "dBM9GTRyL8u8n1eUa"
+        process.env.REACT_APP_EMAIL_PUBLIC_KEY
       );
 
       // Reset form fields
