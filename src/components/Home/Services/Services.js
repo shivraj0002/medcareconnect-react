@@ -1,72 +1,75 @@
-import React from 'react'
-import "./Services.css"
-import Service from "./Service"
+import React from "react";
+import "./Services.css";
+import Service from "./Service";
 
-import { Link } from 'react-router-dom'
-import tempSvg from './../../../assets/SVG/cardiogram-heart.svg'
+import { Link, useNavigate } from "react-router-dom";
+import tempSvg from "./../../../assets/SVG/cardiogram-heart.svg";
 
 const Services = () => {
-
+  const navigate = useNavigate();
   const services = [
     {
-      name: "1Qui labore irure excepteur id.",
+      name: "Quality Healthcare Solutions for Every Generation",
       img: tempSvg,
-      tags: ["Lorem", "ipsum", "dolor", "sit", "amet"],
-      bgColor: "rgb(203 220 237 / 47%)",
+      tags: ["Quality", "Health", "Solutions"],
+      bgColor: "rgba(203, 220, 237, 0.47)",
       link: "/",
-
     },
     {
-      name: "1Qui labore irure excepteur id.",
+      name: "Wide Range of Pharmaceutical Offerings",
       img: tempSvg,
-      tags: ["Lorem", "ipsum", "dolor", "sit", "amet"],
-      bgColor: "rgb(233 233 233 / 47%)",
-      link: "/"
+      tags: ["Pharmaceuticals"],
+      bgColor: "rgba(233, 233, 233, 0.47)",
+      link: "/",
     },
     {
-      name: "1Qui labore irure excepteur id.",
+      name: "Production and Distribution of Health-Centric Medicines",
       img: tempSvg,
-      tags: ["Lorem", "ipsum", "dolor", "sit", "amet"],
-      bgColor: "rgb(241 243 220 / 47%)",
-      href: "/",
+      tags: ["Production", "Distribution", "Medicines"],
+      bgColor: "rgba(241, 243, 220, 0.47)",
+      link: "/",
     },
     {
-      name: "Lorem ipsum dolor sit amet",
+      name: "Leading Experts in Digestive Health Solutions",
       img: tempSvg,
-      tags: ["Lorem", "ipsum", "dolor", "sit", "amet"],
-      bgColor: "rgb(255 232 209 / 47%)",
-      link: "/"
+      tags: ["Digestive Health", "Top-Grade", "Experts"],
+      bgColor: "rgba(255, 232, 209, 0.47)",
+      link: "/",
     },
     {
-      name: "Lorem ipsum dolor sit amet",
+      name: "Nurturing The Young Generation for Long-Term Health",
       img: tempSvg,
-      tags: ["Lorem", "ipsum", "dolor", "sit", "amet"],
-      bgColor: "rgb(223 225 224 / 47%)",
-      link: "/"
+      tags: ["Young Generation", "Premium Healthcare"],
+      bgColor: "rgba(223, 225, 224, 0.47)",
+      link: "/",
     },
     {
-      name: "Lorem ipsum dolor sit amet",
+      name: "Committed to Your Trust and Choice",
       img: tempSvg,
-      tags: ["Lorem", "ipsum", "dolor", "sit", "amet"],
-      bgColor: "rgb(208 241 240 / 47%)",
-      link: "/"
-    }
+      tags: ["Trust", "Choice"],
+      bgColor: "rgba(208, 241, 240, 0.47)",
+      link: "/",
+    },
   ];
 
   return (
     <>
-      <div className='service-section'>
-        <div className='service-left'>
-          <h1 className='service-heading'>
-            Lorem ipsum dolor sit amet?
-          </h1>
-          <p className='service-para'>
-            Anim exercitation tempor eiusmod proident sint esse incididunt culpa adipisicing non culpa officia sit irure.
-
+      <div className="service-section">
+        <div className="service-left">
+          <h1 className="service-heading">Your Path to Optimal Health!</h1>
+          <p className="service-para">
+            Delivering Quality Healthcare Solutions and Pharmaceuticals for All.
           </p>
-          <button className='service-button'>Contact Now</button>
+          <button
+            className="service-button"
+            onClick={() => {
+              navigate("/contact");
+            }}
+          >
+            Contact Now
+          </button>
         </div>
-        <div className='service'>
+        <div className="service">
           <div className="scroll-box__wrapper">
             <div className="scroll-box__container" role="list">
               {services.map((service, index) => {
@@ -77,7 +80,7 @@ const Services = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
 export default Services;

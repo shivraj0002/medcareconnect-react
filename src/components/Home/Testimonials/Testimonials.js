@@ -3,8 +3,6 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import "./Testimonials.css";
 
-const imgu = 'https://plus.unsplash.com/premium_photo-1671886498603-a71f79861aa8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80'
-
 const Testimonials = () => {
   return (
     <>
@@ -27,56 +25,33 @@ const Testimonials = () => {
           interval={6100}
         >
           <div style={{ background: "rgb(0 86 140 / 7%)" }}>
-            <img alt="" src={imgu} />
+            <img alt="" src={require("../../../assets/people/haripriya.jpg")} />
             <div className="myCarousel">
-              <h3>xyz xyz</h3>
+              <h3>Dr.Haripriya</h3>
               <h4>Doctor</h4>
               <p>
-                Est eu voluptate occaecat velit do tempor consequat nostrud do in in culpa fugiat cupidatat. Amet est velit id culpa est id aliqua incididunt amet qui laborum. Enim fugiat in incididunt id laboris.
+                We've partnered with Vasan Pharma for several months now, and
+                we're highly impressed. Their commitment to quality medicine,
+                scientific expertise, and timely service has greatly benefited
+                our patients. Their exceptional communication and customer
+                service make them an invaluable partner.
               </p>
             </div>
           </div>
 
           <div style={{ background: "rgb(0 86 140 / 7%)" }}>
-            <img alt="" src={imgu} />
+            <img
+              alt=""
+              src={require("../../../assets/people/rupesh-kumar.jpg")}
+            />
             <div className="myCarousel">
-              <h3>xyz xyz</h3>
+              <h3>Dr. Rupesh Kumar</h3>
               <h4>Doctor</h4>
               <p>
-                Est eu voluptate occaecat velit do tempor consequat nostrud do in in culpa fugiat cupidatat. Amet est velit id culpa est id aliqua incididunt amet qui laborum. Enim fugiat in incididunt id laboris.
-              </p>
-            </div>
-          </div>
-
-          <div style={{ background: "rgb(0 86 140 / 7%)" }}>
-            <img alt="" src={imgu} />
-            <div className="myCarousel">
-              <h3>xyz xyz</h3>
-              <h4>Doctor</h4>
-              <p>
-                Est eu voluptate occaecat velit do tempor consequat nostrud do in in culpa fugiat cupidatat. Amet est velit id culpa est id aliqua incididunt amet qui laborum. Enim fugiat in incididunt id laboris.
-              </p>
-            </div>
-          </div>
-
-          <div style={{ background: "rgb(0 86 140 / 7%)" }}>
-            <img alt="" src={imgu} />
-            <div className="myCarousel">
-              <h3>xyz xyz</h3>
-              <h4>Doctor</h4>
-              <p>
-                Est eu voluptate occaecat velit do tempor consequat nostrud do in in culpa fugiat cupidatat. Amet est velit id culpa est id aliqua incididunt amet qui laborum. Enim fugiat in incididunt id laboris.
-              </p>
-            </div>
-          </div>
-
-          <div style={{ background: "rgb(0 86 140 / 7%)" }}>
-            <img alt="" src={imgu} />
-            <div className="myCarousel">
-              <h3>xyz xyz</h3>
-              <h4>Doctor</h4>
-              <p>
-                Est eu voluptate occaecat velit do tempor consequat nostrud do in in culpa fugiat cupidatat. Amet est velit id culpa est id aliqua incididunt amet qui laborum. Enim fugiat in incididunt id laboris.
+                Our experience with Vasan Pharma has been outstanding. Their
+                dedication to quality medicine and punctual service greatly
+                benefits our patients. Their excellent communication and
+                customer service set them apart as a valuable partner.
               </p>
             </div>
           </div>

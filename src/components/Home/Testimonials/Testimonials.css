@@ -59,13 +59,13 @@
   padding-left: 5%;
   padding-right: 5%;
   /* border: 1px solid #ddd; */
-  height: 286px;
+  height: 350px;
 }
 
 .carousel .control-dots {
   padding-left: 5px !important;
   outline: 0;
-  bottom: -4%;
+  bottom: -3%;
 }
 
 .myCarousel h3 {
