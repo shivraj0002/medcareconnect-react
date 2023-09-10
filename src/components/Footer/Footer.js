@@ -15,6 +15,8 @@ import logoIconBase from "../../assets/icon-base.png";
 import { Link } from "react-router-dom";
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import GoogleIcon from '@mui/icons-material/Google';
 
 const Footer = () => {
   return (
@@ -98,9 +100,22 @@ const Footer = () => {
                   gutterBottom
                   component={Link}
                   to={"/"}
+                  mr={1}
                   sx={{textDecoration: 'none'}}
                 >
                   <InstagramIcon color="error" />
+                </Typography>
+                <Typography
+                  variant="body1"
+                  color={grey[900]}
+                  fontFamily={"Poppins"}
+                  fontSize={"0.8rem"}
+                  gutterBottom
+                  component={Link}
+                  to={"/"}
+                  sx={{textDecoration: 'none'}}
+                >
+                  <GoogleIcon  />
                 </Typography>
               </Grid>
               <Grid item xs={6}>
@@ -126,8 +141,21 @@ const Footer = () => {
                   component={Link}
                   to={"/"}
                   sx={{textDecoration: 'none'}}
+                  mr={1}
                 >
                   <FacebookIcon color="primary" />
+                </Typography>
+                <Typography
+                  variant="body1"
+                  color={grey[900]}
+                  fontFamily={"Poppins"}
+                  fontSize={"0.8rem"}
+                  gutterBottom
+                  component={Link}
+                  to={"/"}
+                  sx={{textDecoration: 'none'}}
+                >
+                  <YouTubeIcon color="error" />
                 </Typography>
               </Grid>
             </Grid>

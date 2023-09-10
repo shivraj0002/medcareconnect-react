@@ -30,7 +30,7 @@ const Testimonials = () => {
               <h3>Dr.Haripriya</h3>
               <h4>Doctor</h4>
               <p>
-                We've partnered with Vasan Pharma for several months now, and
+                We've partnered with Vanshan Pharma for several months now, and
                 we're highly impressed. Their commitment to quality medicine,
                 scientific expertise, and timely service has greatly benefited
                 our patients. Their exceptional communication and customer
@@ -48,7 +48,7 @@ const Testimonials = () => {
               <h3>Dr. Rupesh Kumar</h3>
               <h4>Doctor</h4>
               <p>
-                Our experience with Vasan Pharma has been outstanding. Their
+                Our experience with Vanshan Pharma has been outstanding. Their
                 dedication to quality medicine and punctual service greatly
                 benefits our patients. Their excellent communication and
                 customer service set them apart as a valuable partner.
