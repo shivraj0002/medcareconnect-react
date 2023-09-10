@@ -17,6 +17,7 @@ import prod1 from "../../assets/Products/vanozyme-1-1.png";
 import prod2 from "../../assets/Products/vanzit_d3.png";
 import prod3 from "../../assets/Products/biafe-xt-1.png";
 import prod4 from "../../assets/Products/pimtop-1.jpg";
+import Product from "../Home/components/Product";
 
 const imgu =
   "https://plus.unsplash.com/premium_photo-1671886498603-a71f79861aa8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80";
@@ -86,37 +87,9 @@ const ProductsPage = () => {
         sx={{ mb: "20px" }}
       />
       <Grid container spacing={3}>
-        {filteredProducts.map((product) => (
-          <Grid item key={product.id} xs={12} sm={6} md={4} lg={3}>
-            <Card variant="outlined">
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  height="140"
-                  image={product.imgUrl}
-                  alt="Product"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    {product.name}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    {product.description.length > 30
-                      ? product.description.substring(0, 30) + "..."
-                      : product.description}
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions>
-                <Button
-                  size="small"
-                  color="primary"
-                  endIcon={<TrendingFlatIcon />}
-                >
-                  Learn More
-                </Button>
-              </CardActions>
-            </Card>
+        {filteredProducts.map((product, idx) => (
+          <Grid item key={idx} xs={12} sm={6} md={4} lg={3}>
+            <Product item={product} />
           </Grid>
         ))}
       </Grid>

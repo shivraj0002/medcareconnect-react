@@ -6,9 +6,11 @@ import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 import TrendingFlatIcon from "@mui/icons-material/TrendingFlat";
 import { useNavigate } from "react-router";
+import CommonModal from "./CommonModal";
 
 export default function Product(props) {
   const navigate = useNavigate();
+  const [open, setOpen] = React.useState(false);
   const { name, price, description, imgUrl, category } = props.item;
   return (
     <Card variant="outlined" sx={{ maxWidth: 345, m: "10px" }}>
@@ -31,12 +33,21 @@ export default function Product(props) {
           color="primary"
           endIcon={<TrendingFlatIcon />}
           onClick={() => {
-            navigate("/products");
+            // navigate("/products");
+            setOpen(true);
           }}
         >
           Learn More
         </Button>
       </CardActions>
+      <CommonModal
+        open={open}
+        setOpen={(bool) => {
+          setOpen(bool);
+        }}
+        name={name}
+        desc={description}
+      />
     </Card>
   );
 }
