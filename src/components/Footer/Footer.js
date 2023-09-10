@@ -12,6 +12,7 @@ import AdbIcon from "@mui/icons-material/Adb";
 import { deepOrange, grey } from "@mui/material/colors";
 import logoIcon from "../../assets/icon-only.png";
 import logoIconBase from "../../assets/icon-base.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -54,6 +55,8 @@ const Footer = () => {
                   fontFamily={"Poppins"}
                   fontSize={"1rem"}
                   gutterBottom
+                  component={Link}
+                  to={"/products"}
                 >
                   Resources
                 </Typography>
@@ -65,6 +68,8 @@ const Footer = () => {
                   fontFamily={"Poppins"}
                   fontSize={"1rem"}
                   gutterBottom
+                  component={Link}
+                  to={"/"}
                 >
                   Follow US
                 </Typography>
@@ -76,6 +81,8 @@ const Footer = () => {
                   fontFamily={"Poppins"}
                   fontSize={"0.8rem"}
                   gutterBottom
+                  component={Link}
+                  to={"/contact"}
                 >
                   Cantact US
                 </Typography>
@@ -87,6 +94,8 @@ const Footer = () => {
                   fontFamily={"Poppins"}
                   fontSize={"0.8rem"}
                   gutterBottom
+                  component={Link}
+                  to={"/"}
                 >
                   Instagram
                 </Typography>
@@ -98,6 +107,8 @@ const Footer = () => {
                   fontFamily={"Poppins"}
                   fontSize={"0.8rem"}
                   gutterBottom
+                  component={Link}
+                  to={"/contact"}
                 >
                   Request for Call
                 </Typography>
@@ -109,6 +120,8 @@ const Footer = () => {
                   fontFamily={"Poppins"}
                   fontSize={"0.8rem"}
                   gutterBottom
+                  component={Link}
+                  to={"/"}
                 >
                   Facebook
                 </Typography>

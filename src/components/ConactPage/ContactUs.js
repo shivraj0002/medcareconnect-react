@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import {
   Container,
   Typography,
@@ -13,6 +13,7 @@ import {
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
+import emailjs from "@emailjs/browser";
 
 const backgroundImage =
   "https://images.unsplash.com/photo-1567333971983-7ba18485eaad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHBoYXJtYWNpc3R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60";
@@ -48,19 +49,37 @@ const ContactUs = () => {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const formRef = useRef(null);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log("Name:", name);
-    console.log("Phone:", phone);
-    console.log("Email:", email);
-    console.log("Message:", message);
-    // Reset form fields
-    setName("");
-    setPhone("");
-    setEmail("");
-    setMessage("");
+
+    try {
+      console.log("Name:", name);
+      console.log("Phone:", phone);
+      console.log("Email:", email);
+      console.log("Message:", message);
+
+      const result = await emailjs.send(
+        "service_cbfxuvi",
+        "template_1mh4rhf",
+        {
+          from_name: name,
+          to_name: "Vanshan Pharmaceuticals",
+          message: `${message}, Customer Phone: ${phone}, Customer Email: ${email}`,
+          reply_to: "Vanshan Pharmaceuticals Team",
+        },
+        "dBM9GTRyL8u8n1eUa"
+      );
+
+      // Reset form fields
+      setName("");
+      setPhone("");
+      setEmail("");
+      setMessage("");
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
@@ -84,7 +103,7 @@ const ContactUs = () => {
                   sx={{ textDecoration: "none", color: "black" }}
                 >
                   House No. 125, Street No. 12, Vipin Garden Extension, Dwarka
-                  Mor, New Delhi-110059
+                  Mor, New Delhi-110059
                 </Typography>
               </IconWrapper>
               <IconWrapper>
@@ -98,7 +117,7 @@ const ContactUs = () => {
                   target="_blank"
                   sx={{ textDecoration: "none", color: "black" }}
                 >
-                  +91 9955273559
+                  +91 9955273559
                 </Typography>
               </IconWrapper>
               <IconWrapper>
@@ -115,7 +134,7 @@ const ContactUs = () => {
                   vanshanpharmaceuticals@gmail.com
                 </Typography>
               </IconWrapper>
-              <form onSubmit={handleSubmit}>
+              <form ref={formRef} onSubmit={handleSubmit}>
                 <TextField
                   label="Name"
                   variant="outlined"
