@@ -11,7 +11,7 @@ const Testimonials = () => {
           <h1 className="testimonial-heading">
             <span className="underline"></span>Our Testimonials
           </h1>
-          <p className="testimonial-para">
+          <p className="testimonial-para-tst">
             Our client send us bunch of smiles with our services and we love
             them{" "}
           </p>

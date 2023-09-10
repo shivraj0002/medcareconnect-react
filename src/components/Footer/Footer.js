@@ -13,6 +13,8 @@ import { deepOrange, grey } from "@mui/material/colors";
 import logoIcon from "../../assets/icon-only.png";
 import logoIconBase from "../../assets/icon-base.png";
 import { Link } from "react-router-dom";
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
 
 const Footer = () => {
   return (
@@ -96,8 +98,9 @@ const Footer = () => {
                   gutterBottom
                   component={Link}
                   to={"/"}
+                  sx={{textDecoration: 'none'}}
                 >
-                  Instagram
+                  <InstagramIcon color="error" />
                 </Typography>
               </Grid>
               <Grid item xs={6}>
@@ -122,8 +125,9 @@ const Footer = () => {
                   gutterBottom
                   component={Link}
                   to={"/"}
+                  sx={{textDecoration: 'none'}}
                 >
-                  Facebook
+                  <FacebookIcon color="primary" />
                 </Typography>
               </Grid>
             </Grid>

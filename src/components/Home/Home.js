@@ -17,7 +17,7 @@ const Home = () => {
           <span className="underline"></span>What We Provide?
         </h1>
         <p className="testimonial-para">
-          Comprehensive Healthcare Solutions and Pharmaceuticals.{" "}
+        Leading Experts in Digestive Health SolutionsWe take pride in being the leading manufacturer of top-grade, adult-focuseddigestive health solutions. Our Vitamin D3 Drops for Kids serves as a steppingstone for a healthy life. Vitamin D3 is crucial for bone health and immunity ingrowing children. We ensure our drops are easy to administer and have apleasant taste, making healthcare a hassle-free process for both parents and children.{" "}
         </p>
       </div>
       <Services />

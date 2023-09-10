@@ -14,7 +14,7 @@
   text-decoration: none;
 }
 .service-image {
-  width: 70px;
+  width: 40px;
 }
 .service-name {
   color: rgb(80 80 80);
@@ -41,7 +41,7 @@
   border-radius: 4px;
   font-family: SansationBold;
   color: rgb(80 80 80);
-  font-size: 0.7rem;
+  font-size: 0.9rem;
 }
 @media screen and (max-width: 460px) {
 }
